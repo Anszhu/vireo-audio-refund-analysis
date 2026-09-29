@@ -2,7 +2,7 @@
 
 ## Current status
 
-This audit records the local verification pass on 29 September 2026. The public GitHub repository is `https://github.com/Anszhu/vireo-audio-refund-analysis`. The user authorized publication of these final local changes to the existing public repository under the `Anszhu` identity. Streamlit Cloud deployment itself has not been performed. For Streamlit Community Cloud, use repository `Anszhu/vireo-audio-refund-analysis`, branch `main`, main file `app_public.py`; deployment itself has not been performed.
+This audit records the local verification pass on 29 September 2026. The public GitHub repository is `https://github.com/Anszhu/vireo-audio-refund-analysis`. The submitter reports that the Streamlit Community Cloud deployment was completed and manually verified. The entrypoint is `app_public.py` on `main`; this audit does not claim independent browser verification of the public URL. The public deployment is [here](https://vireo-audio-refund-analysis-fab3xdggd3hytln7qxvyfa.streamlit.app/).
 
 ## Data handling and privacy
 
@@ -10,6 +10,7 @@ This audit records the local verification pass on 29 September 2026. The public 
 - `app_public.py` reads exactly four sanitized aggregate files: `reason_code_summary.csv`, `reconciliation_bridge_clean.csv`, `agent_totals.csv`, and `target_sensitivity.csv`. It does not load raw data, case text, full review labels, or identifier maps.
 - A copy of only `app_public.py` and those four CSVs was run from a clean smoke-test folder with no `data/raw/` directory. All six pages loaded and interacted without browser errors or failed requests.
 - The public aggregate app omits case-level evidence and the above-cap subset because neither is in its allowed four-file input set.
+- The four validation CSVs remain available locally and are git-ignored; the committed tree no longer tracks them.
 
 ## Pipeline and test results
 
@@ -29,6 +30,6 @@ This audit records the local verification pass on 29 September 2026. The public 
 
 - Text rules are deterministic regex/keyword rules. Three gaps found in hold-out were patched without a fresh third sample. “Likely” reflects agent notes, not dispatch confirmation; ambiguous cross-ticket matches and inferred order joins remain.
 - The 1% replacement residual scenario is a planning assumption, not an observed or forecast saving. The legacy paise interpretation is strongly supported by internal evidence but was not independently confirmed by Vireo.
-- The dashboard smoke tests were local, not a deployed Streamlit Cloud check. The final local changes are not on GitHub until the user chooses to push them.
+- The submitter reports that the public Streamlit deployment was manually verified at the URL above. This audit relies on that report and does not claim independent verification. The cleanup changes recorded here are included in the current submission commit.
 - The submitter reports spending **7 hours**, above the brief’s approximately 5-hour cap. Screen recording and public Drive link were not provided; those fields remain to be supplied in `submission-form.md`.
 - Reviewer identity/independence is not documented. A fresh, independent case-level review would strengthen the evidence before operational decisions.

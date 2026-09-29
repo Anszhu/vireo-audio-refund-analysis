@@ -49,9 +49,19 @@ pip install -r requirements.txt
 python -m src.reports          # pipeline + reconciliation + validation report + memo + decisions + audit (≈2 s)
 pytest tests/                  # automated tests
 streamlit run app.py           # interactive tool
+# public, aggregate-only demo (no raw inputs required):
+streamlit run app_public.py
 # human review (only after a person has filled validation/human_review.csv):
 python -m src.human_review --score && python -m src.reports
 ```
+
+## Public Streamlit deployment
+The submitter reports that the public deployment was completed and manually verified. The deployed entrypoint is `app_public.py`; it reads the four sanitized aggregate CSVs from `outputs/` and does not load client raw records.
+
+- Repository: [`Anszhu/vireo-audio-refund-analysis`](https://github.com/Anszhu/vireo-audio-refund-analysis)
+- Branch: `main`
+- Main file: `app_public.py`
+- Public URL: [vireo-audio-refund-analysis-fab3xdggd3hytln7qxvyfa.streamlit.app](https://vireo-audio-refund-analysis-fab3xdggd3hytln7qxvyfa.streamlit.app/)
 
 ## Testing
 ```bash
@@ -103,7 +113,7 @@ app.py  README.md  DECISIONS.md  DATA_AUDIT.md  AI_USAGE.md  submission-form.md 
 src/      ingest · normalize · reconcile · refund_analysis · agent_analysis · ai_assistant · exceptions · gw_other · target · human_review · validate · pipeline · reports
 tests/    test_pipeline.py
 validation/  HUMAN_REVIEW_INSTRUCTIONS.md · human_review.csv (labels empty until a person fills them; git-ignored, contains ticket text)
-          dev_sample_labels_prefix.csv · holdout_sample_labels.csv   (AI-labelled; identifiers pseudonymized)
+          local validation CSVs (AI-labelled; git-ignored; identifiers pseudonymized)
 outputs/  refund_reconciliation.{csv,md} · reconciliation_bridge_clean.csv · reason_code_summary.csv · target_sensitivity.csv · gw_other_review.csv
           one_page_memo.md · validation_report.md · demo_script.md · case-level exports (generated locally, git-ignored)
 data/     README.md · raw/ (you supply, git-ignored) · processed/ (generated) · raw_checksums.txt

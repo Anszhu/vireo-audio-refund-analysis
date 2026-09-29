@@ -11,3 +11,4 @@ data/processed/
 outputs/private/
 validation/private/
 validation/human_review.csv
+validation/*.csv
