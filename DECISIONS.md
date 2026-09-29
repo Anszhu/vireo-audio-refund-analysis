@@ -12,9 +12,9 @@ Each entry: **Decision · Evidence · Reason · Impact · Limitation**. All numb
 ## 2. Legacy monetary values
 * **Decision:** divide `legacy_fd` refund amounts by 100 (paise → rupees); helpdesk amounts unchanged. Raw amount kept in `refund_amount_raw`.
 * **Evidence:** exactly 100× on 125/125 re-imported pairs; median refund/retail-price ratio 90 raw vs 0.90 for helpdesk, and 0.90 for the 650 legacy-only refund rows after ÷100; 1,501/1,503 rupee amounts typed in agent notes agree after ÷100.
-* **Reason:** the divisor is derived from the data; the supplied email thread says legacy money is stored "the way Freshdesk stored money".
+* **Reason:** the divisor is derived from the data rather than presumed; the email thread says legacy money is stored "the way Freshdesk stored money".
 * **Impact:** the main driver of the crore-vs-lakh gap (₹18.73 crore removed after de-duplication).
-* **Limitation:** evidence strongly supports the paise-scale interpretation: exact ×100 reconciliation on all 125 re-imported refund pairs plus retail-price and agent-note support. The client did not independently confirm the unit during the assignment window, so it remains a documented analytical assumption rather than a client-confirmed fact.
+* **Limitation:** evidence strongly supports the paise-scale interpretation, including exact ×100 reconciliation on re-imported refund pairs and supporting retail-price/agent-note evidence. The client has not independently confirmed the unit, so it remains a documented analytical assumption rather than a client-confirmed fact.
 
 ## 3. Choosing the canonical ticket
 * **Decision:** one row per ticket_id; helpdesk copy preferred, otherwise the only row.
@@ -60,14 +60,14 @@ Each entry: **Decision · Evidence · Reason · Impact · Limitation**. All numb
 
 ## 9. GW-OTHER is a review signal, not proof of wrongdoing
 * **Decision:** report GW-OTHER as **requires review**, with the recorded code left unchanged.
-* **Evidence:** 991 refunds worth ₹29.07 lakh in total (43% of canonical value); 879 (89%) exceed the ₹500 goodwill cap and those 879 refunds are worth ₹28.72 lakh; 708 of them name a specific ordinary reason in the text, only 13 describe goodwill; it is the first dropdown option according to the supplied email thread.
+* **Evidence:** 991 refunds worth ₹29.07 lakh in total (43% of canonical value); 879 (89%) exceed the ₹500 goodwill cap and those 879 refunds are worth ₹28.72 lakh; 708 of them name a specific ordinary reason in the text, only 13 describe goodwill; it is the first dropdown option in the supplied email thread.
 * **Reason:** an above-cap GW-OTHER refund is either a cap/approval issue or a mis-coded ordinary refund; the data cannot distinguish the two, and the cap applies to goodwill credits only.
 * **Impact:** points reviewers to a coding-control gap without accusing anyone.
 * **Limitation:** Team Lead approval is not in the data; text categories come from rules and are QA prompts.
 
 ## 10. Rules are QA assistance, not the source of record
 * **Decision:** the agent's dropdown `refund_reason_code` stays the source of record; deterministic text rules only suggest a reason and detect "both remedies" statements.
-* **Evidence:** hold-out (AI-labelled, not independent) exception class 17/18; known failure types are listed in the validation report; a 40-case AI secondary review agreed on 37 cases, with 0 FP / 0 FN under the existing comparison. This is supplemental evidence, not independent human validation; no person completed independent validation during the assignment window.
+* **Evidence:** hold-out (AI-labelled, not independent) exception class 17/18; known failure types are listed in the validation report; independent human validation is pending (an AI-assistant review of 40 cases agreed on 37, 0 FP / 0 FN; not independent).
 * **Reason:** the text is templated and typo-ridden; rules are free, reproducible and inspectable, and no evidence suggested an LLM would beat them here.
 * **Impact:** ₹0 model cost per run, no external dependency, same result every run.
 * **Limitation:** new phrasings will be missed; classes other than "confirmed" are prompts to look, not findings.

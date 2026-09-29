@@ -1,108 +1,108 @@
-"section","period","item","refund_count","refund_value_inr","note"
-"A_total_bridge","all","1. Raw export (as exported, mixed units)","2465","230124081.0","Sum of refund_amount_inr over all 12,238 exported rows; legacy_fd in paise, helpdesk in rupees"
-"A_total_bridge","all","2. Less re-imported duplicate rows (legacy copy, raw units)","-125","-36101100.0","638 ticket_ids exported under both systems; helpdesk copy kept"
-"A_total_bridge","all","3. After de-duplication, still mixed units","2340","194022981.0",""
-"A_total_bridge","all","4. Less legacy unit scaling (legacy_fd / 100)","0","-187313049.0","Evidence: legacy amounts are exactly 100x helpdesk amounts on every re-imported pair with a refund"
-"A_total_bridge","all","5. Canonical refund total (rupees)","2340","6709932.0",""
-"B_quarterly_bridge","2025Q1","raw export value","244","61049992.0",""
-"B_quarterly_bridge","2025Q1","less re-import duplicates","-32","-9169200.0",""
-"B_quarterly_bridge","2025Q1","less legacy unit scaling","0","-51271209.0",""
-"B_quarterly_bridge","2025Q1","canonical value","212","609583.0",""
-"B_quarterly_bridge","2025Q2","raw export value","302","72879635.0",""
-"B_quarterly_bridge","2025Q2","less re-import duplicates","-49","-13743500.0",""
-"B_quarterly_bridge","2025Q2","less legacy unit scaling","0","-58408713.0",""
-"B_quarterly_bridge","2025Q2","canonical value","253","727422.0",""
-"B_quarterly_bridge","2025Q3","raw export value","449","92028618.0",""
-"B_quarterly_bridge","2025Q3","less re-import duplicates","-44","-13188400.0",""
-"B_quarterly_bridge","2025Q3","less legacy unit scaling","0","-77633127.0",""
-"B_quarterly_bridge","2025Q3","canonical value","405","1207091.0",""
-"B_quarterly_bridge","2025Q4","raw export value","542","1627575.0",""
-"B_quarterly_bridge","2025Q4","less re-import duplicates","0","-0.0",""
-"B_quarterly_bridge","2025Q4","less legacy unit scaling","0","0.0",""
-"B_quarterly_bridge","2025Q4","canonical value","542","1627575.0",""
-"B_quarterly_bridge","2026Q1","raw export value","455","1258438.0",""
-"B_quarterly_bridge","2026Q1","less re-import duplicates","0","-0.0",""
-"B_quarterly_bridge","2026Q1","less legacy unit scaling","0","0.0",""
-"B_quarterly_bridge","2026Q1","canonical value","455","1258438.0",""
-"B_quarterly_bridge","2026Q2","raw export value","473","1279823.0",""
-"B_quarterly_bridge","2026Q2","less re-import duplicates","0","-0.0",""
-"B_quarterly_bridge","2026Q2","less legacy unit scaling","0","0.0",""
-"B_quarterly_bridge","2026Q2","canonical value","473","1279823.0",""
-"C_source_system_canonical","all","helpdesk","1690","4817881.0",""
-"C_source_system_canonical","all","legacy_fd","650","1892051.0",""
-"D_monthly_canonical","2025-01","all reasons","58","141048.0",""
-"D_monthly_canonical","2025-02","all reasons","63","177938.0",""
-"D_monthly_canonical","2025-03","all reasons","91","290597.0",""
-"D_monthly_canonical","2025-04","all reasons","79","250089.0",""
-"D_monthly_canonical","2025-05","all reasons","86","217464.0",""
-"D_monthly_canonical","2025-06","all reasons","88","259869.0",""
-"D_monthly_canonical","2025-07","all reasons","119","356986.0",""
-"D_monthly_canonical","2025-08","all reasons","125","367821.0",""
-"D_monthly_canonical","2025-09","all reasons","161","482284.0",""
-"D_monthly_canonical","2025-10","all reasons","185","575637.0",""
-"D_monthly_canonical","2025-11","all reasons","186","575984.0",""
-"D_monthly_canonical","2025-12","all reasons","171","475954.0",""
-"D_monthly_canonical","2026-01","all reasons","153","449868.0",""
-"D_monthly_canonical","2026-02","all reasons","139","372797.0",""
-"D_monthly_canonical","2026-03","all reasons","163","435773.0",""
-"D_monthly_canonical","2026-04","all reasons","154","402265.0",""
-"D_monthly_canonical","2026-05","all reasons","149","426737.0",""
-"D_monthly_canonical","2026-06","all reasons","170","450821.0",""
-"E_quarterly_canonical","2025Q1","all reasons","212","609583.0",""
-"E_quarterly_canonical","2025Q2","all reasons","253","727422.0",""
-"E_quarterly_canonical","2025Q3","all reasons","405","1207091.0",""
-"E_quarterly_canonical","2025Q4","all reasons","542","1627575.0",""
-"E_quarterly_canonical","2026Q1","all reasons","455","1258438.0",""
-"E_quarterly_canonical","2026Q2","all reasons","473","1279823.0",""
-"F_reason_canonical","all","CANCEL","222","612950.0",""
-"F_reason_canonical","all","DOA-REPL","147","471190.0",""
-"F_reason_canonical","all","DUP-PAYMENT","321","884586.0",""
-"F_reason_canonical","all","GW-OTHER","991","2907036.0",""
-"F_reason_canonical","all","LOST-TRANSIT","47","156557.0",""
-"F_reason_canonical","all","PRICE-ADJ","71","207073.0",""
-"F_reason_canonical","all","RETURN-QC-OK","452","1181386.0",""
-"F_reason_canonical","all","WTY-BUYBACK","89","289154.0",""
-"G_agent_canonical","all","AGENT-6FE707AC1C","22","83065.0",""
-"G_agent_canonical","all","AGENT-8186D4526C","30","103853.0",""
-"G_agent_canonical","all","AGENT-12C1E04FFA","30","76222.0",""
-"G_agent_canonical","all","AGENT-C2250AB9A2","16","45618.0",""
-"G_agent_canonical","all","AGENT-C4DAB22796","31","81023.0",""
-"G_agent_canonical","all","AGENT-05E479EE73","31","72548.0",""
-"G_agent_canonical","all","AGENT-867063819F","27","87999.0",""
-"G_agent_canonical","all","AGENT-25CFA1B7B8","17","59077.0",""
-"G_agent_canonical","all","AGENT-FD8B6215AA","26","63041.0",""
-"G_agent_canonical","all","AGENT-8D2E651818","32","102255.0",""
-"G_agent_canonical","all","AGENT-30D746BC4C","23","84335.0",""
-"G_agent_canonical","all","AGENT-99D1C33C65","24","65481.0",""
-"G_agent_canonical","all","AGENT-32566DEF47","27","94370.0",""
-"G_agent_canonical","all","AGENT-F4A0834255","22","64044.0",""
-"G_agent_canonical","all","AGENT-0677E1B0C2","29","82408.0",""
-"G_agent_canonical","all","AGENT-3A17F69C28","28","83716.0",""
-"G_agent_canonical","all","AGENT-20E7E3F166","32","88352.0",""
-"G_agent_canonical","all","AGENT-CAD0283874","87","231022.0",""
-"G_agent_canonical","all","AGENT-94D955F3D8","12","22174.0",""
-"G_agent_canonical","all","AGENT-4BF6A29FD7","19","47310.0",""
-"G_agent_canonical","all","AGENT-5248A51FF0","18","55020.0",""
-"G_agent_canonical","all","AGENT-E8307FEA53","17","36722.0",""
-"G_agent_canonical","all","AGENT-3A0C774ABE","10","37505.0",""
-"G_agent_canonical","all","AGENT-333BBC740C","14","43923.0",""
-"G_agent_canonical","all","AGENT-8DC899E1C3","9","21767.0",""
-"G_agent_canonical","all","AGENT-2C389F865D","65","193955.0",""
-"G_agent_canonical","all","AGENT-2E6CFE0BA4","43","156694.0",""
-"G_agent_canonical","all","AGENT-4458F7DBB1","57","172413.0",""
-"G_agent_canonical","all","AGENT-74E8D5BD49","45","151218.0",""
-"G_agent_canonical","all","AGENT-CE76EFF670","162","507323.0",""
-"G_agent_canonical","all","AGENT-51B9A9155D","49","124101.0",""
-"G_agent_canonical","all","AGENT-1D9D0979BF","126","338500.0",""
-"G_agent_canonical","all","AGENT-4D3361BC6C","113","323954.0",""
-"G_agent_canonical","all","AGENT-C8B243A426","118","289841.0",""
-"G_agent_canonical","all","AGENT-B57F209F90","235","627682.0",""
-"G_agent_canonical","all","AGENT-266DE49821","266","773812.0",""
-"G_agent_canonical","all","AGENT-C48C9AEC6C","175","428670.0",""
-"G_agent_canonical","all","AGENT-8DD1B16EC9","171","490184.0",""
-"G_agent_canonical","all","AGENT-1CD1933598","43","170641.0",""
-"G_agent_canonical","all","AGENT-2F36F831DB","9","20035.0",""
-"G_agent_canonical","all","AGENT-EFF9085572","7","28433.0",""
-"G_agent_canonical","all","AGENT-BE73516C67","9","27670.0",""
-"G_agent_canonical","all","AGENT-EA257582BF","5","10506.0",""
-"G_agent_canonical","all","AGENT-2913D1607A","9","41450.0",""
+section,period,item,refund_count,refund_value_inr,note
+A_total_bridge,all,"1. Raw export (as exported, mixed units)",2465,230124081.0,"Sum of refund_amount_inr over all 12,238 exported rows; legacy_fd in paise, helpdesk in rupees"
+A_total_bridge,all,"2. Less re-imported duplicate rows (legacy copy, raw units)",-125,-36101100.0,638 ticket_ids exported under both systems; helpdesk copy kept
+A_total_bridge,all,"3. After de-duplication, still mixed units",2340,194022981.0,
+A_total_bridge,all,4. Less legacy unit scaling (legacy_fd / 100),0,-187313049.0,Evidence: legacy amounts are exactly 100x helpdesk amounts on every re-imported pair with a refund
+A_total_bridge,all,5. Canonical refund total (rupees),2340,6709932.0,
+B_quarterly_bridge,2025Q1,raw export value,244,61049992.0,
+B_quarterly_bridge,2025Q1,less re-import duplicates,-32,-9169200.0,
+B_quarterly_bridge,2025Q1,less legacy unit scaling,0,-51271209.0,
+B_quarterly_bridge,2025Q1,canonical value,212,609583.0,
+B_quarterly_bridge,2025Q2,raw export value,302,72879635.0,
+B_quarterly_bridge,2025Q2,less re-import duplicates,-49,-13743500.0,
+B_quarterly_bridge,2025Q2,less legacy unit scaling,0,-58408713.0,
+B_quarterly_bridge,2025Q2,canonical value,253,727422.0,
+B_quarterly_bridge,2025Q3,raw export value,449,92028618.0,
+B_quarterly_bridge,2025Q3,less re-import duplicates,-44,-13188400.0,
+B_quarterly_bridge,2025Q3,less legacy unit scaling,0,-77633127.0,
+B_quarterly_bridge,2025Q3,canonical value,405,1207091.0,
+B_quarterly_bridge,2025Q4,raw export value,542,1627575.0,
+B_quarterly_bridge,2025Q4,less re-import duplicates,0,-0.0,
+B_quarterly_bridge,2025Q4,less legacy unit scaling,0,0.0,
+B_quarterly_bridge,2025Q4,canonical value,542,1627575.0,
+B_quarterly_bridge,2026Q1,raw export value,455,1258438.0,
+B_quarterly_bridge,2026Q1,less re-import duplicates,0,-0.0,
+B_quarterly_bridge,2026Q1,less legacy unit scaling,0,0.0,
+B_quarterly_bridge,2026Q1,canonical value,455,1258438.0,
+B_quarterly_bridge,2026Q2,raw export value,473,1279823.0,
+B_quarterly_bridge,2026Q2,less re-import duplicates,0,-0.0,
+B_quarterly_bridge,2026Q2,less legacy unit scaling,0,0.0,
+B_quarterly_bridge,2026Q2,canonical value,473,1279823.0,
+C_source_system_canonical,all,helpdesk,1690,4817881.0,
+C_source_system_canonical,all,legacy_fd,650,1892051.0,
+D_monthly_canonical,2025-01,all reasons,58,141048.0,
+D_monthly_canonical,2025-02,all reasons,63,177938.0,
+D_monthly_canonical,2025-03,all reasons,91,290597.0,
+D_monthly_canonical,2025-04,all reasons,79,250089.0,
+D_monthly_canonical,2025-05,all reasons,86,217464.0,
+D_monthly_canonical,2025-06,all reasons,88,259869.0,
+D_monthly_canonical,2025-07,all reasons,119,356986.0,
+D_monthly_canonical,2025-08,all reasons,125,367821.0,
+D_monthly_canonical,2025-09,all reasons,161,482284.0,
+D_monthly_canonical,2025-10,all reasons,185,575637.0,
+D_monthly_canonical,2025-11,all reasons,186,575984.0,
+D_monthly_canonical,2025-12,all reasons,171,475954.0,
+D_monthly_canonical,2026-01,all reasons,153,449868.0,
+D_monthly_canonical,2026-02,all reasons,139,372797.0,
+D_monthly_canonical,2026-03,all reasons,163,435773.0,
+D_monthly_canonical,2026-04,all reasons,154,402265.0,
+D_monthly_canonical,2026-05,all reasons,149,426737.0,
+D_monthly_canonical,2026-06,all reasons,170,450821.0,
+E_quarterly_canonical,2025Q1,all reasons,212,609583.0,
+E_quarterly_canonical,2025Q2,all reasons,253,727422.0,
+E_quarterly_canonical,2025Q3,all reasons,405,1207091.0,
+E_quarterly_canonical,2025Q4,all reasons,542,1627575.0,
+E_quarterly_canonical,2026Q1,all reasons,455,1258438.0,
+E_quarterly_canonical,2026Q2,all reasons,473,1279823.0,
+F_reason_canonical,all,CANCEL,222,612950.0,
+F_reason_canonical,all,DOA-REPL,147,471190.0,
+F_reason_canonical,all,DUP-PAYMENT,321,884586.0,
+F_reason_canonical,all,GW-OTHER,991,2907036.0,
+F_reason_canonical,all,LOST-TRANSIT,47,156557.0,
+F_reason_canonical,all,PRICE-ADJ,71,207073.0,
+F_reason_canonical,all,RETURN-QC-OK,452,1181386.0,
+F_reason_canonical,all,WTY-BUYBACK,89,289154.0,
+G_agent_canonical,all,agent-6FE707AC1C,22,83065.0,
+G_agent_canonical,all,agent-8186D4526C,30,103853.0,
+G_agent_canonical,all,agent-12C1E04FFA,30,76222.0,
+G_agent_canonical,all,agent-C2250AB9A2,16,45618.0,
+G_agent_canonical,all,agent-C4DAB22796,31,81023.0,
+G_agent_canonical,all,agent-05E479EE73,31,72548.0,
+G_agent_canonical,all,agent-867063819F,27,87999.0,
+G_agent_canonical,all,agent-25CFA1B7B8,17,59077.0,
+G_agent_canonical,all,agent-FD8B6215AA,26,63041.0,
+G_agent_canonical,all,agent-8D2E651818,32,102255.0,
+G_agent_canonical,all,agent-30D746BC4C,23,84335.0,
+G_agent_canonical,all,agent-99D1C33C65,24,65481.0,
+G_agent_canonical,all,agent-32566DEF47,27,94370.0,
+G_agent_canonical,all,agent-F4A0834255,22,64044.0,
+G_agent_canonical,all,agent-0677E1B0C2,29,82408.0,
+G_agent_canonical,all,agent-3A17F69C28,28,83716.0,
+G_agent_canonical,all,agent-20E7E3F166,32,88352.0,
+G_agent_canonical,all,agent-CAD0283874,87,231022.0,
+G_agent_canonical,all,agent-94D955F3D8,12,22174.0,
+G_agent_canonical,all,agent-4BF6A29FD7,19,47310.0,
+G_agent_canonical,all,agent-5248A51FF0,18,55020.0,
+G_agent_canonical,all,agent-E8307FEA53,17,36722.0,
+G_agent_canonical,all,agent-3A0C774ABE,10,37505.0,
+G_agent_canonical,all,agent-333BBC740C,14,43923.0,
+G_agent_canonical,all,agent-8DC899E1C3,9,21767.0,
+G_agent_canonical,all,agent-2C389F865D,65,193955.0,
+G_agent_canonical,all,agent-2E6CFE0BA4,43,156694.0,
+G_agent_canonical,all,agent-4458F7DBB1,57,172413.0,
+G_agent_canonical,all,agent-74E8D5BD49,45,151218.0,
+G_agent_canonical,all,agent-CE76EFF670,162,507323.0,
+G_agent_canonical,all,agent-51B9A9155D,49,124101.0,
+G_agent_canonical,all,agent-1D9D0979BF,126,338500.0,
+G_agent_canonical,all,agent-4D3361BC6C,113,323954.0,
+G_agent_canonical,all,agent-C8B243A426,118,289841.0,
+G_agent_canonical,all,agent-B57F209F90,235,627682.0,
+G_agent_canonical,all,agent-266DE49821,266,773812.0,
+G_agent_canonical,all,agent-C48C9AEC6C,175,428670.0,
+G_agent_canonical,all,agent-8DD1B16EC9,171,490184.0,
+G_agent_canonical,all,agent-1CD1933598,43,170641.0,
+G_agent_canonical,all,agent-2F36F831DB,9,20035.0,
+G_agent_canonical,all,agent-EFF9085572,7,28433.0,
+G_agent_canonical,all,agent-BE73516C67,9,27670.0,
+G_agent_canonical,all,agent-EA257582BF,5,10506.0,
+G_agent_canonical,all,agent-2913D1607A,9,41450.0,

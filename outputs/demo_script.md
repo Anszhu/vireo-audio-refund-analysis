@@ -6,7 +6,7 @@
 "Finance said refunds were over a crore a quarter; the helpdesk said about eleven lakh. I built a small pipeline and Streamlit tool that reconciles the two, breaks refunds down by month, reason code and agent, and flags refund-plus-replacement exceptions. The answer is ₹67.10 lakh total, about ₹11.18 lakh a quarter."
 
 **0:20-0:50 - Prompt(s) used**
-"I used Claude with one long brief: act as data engineer and analyst, read every file first, don't fabricate numbers, don't silently fix data, audit before building, then reconcile, validate, build the tool. Key instructions: normalise money only with evidence, use agent_id, don't accuse individual agents, and label assumptions. For the final pass I asked Codex to audit validation claims, handoffs, privacy, and consistency without changing the analysis. No paid API is used and the tool makes no AI calls."
+"I used Claude with one long brief: act as data engineer and analyst, read every file first, don't fabricate numbers, don't silently fix data, audit before building, then reconcile, validate, build the tool. Key instructions: normalise money only with evidence, use agent_id, don't accuse individual agents, and label assumptions. No paid API is used and the tool makes no AI calls."
 
 **0:50-1:35 - Tool walkthrough**
 "Page 6, the Board Pack: the refund position, the main drivers, the control issue and the opportunity on one screen. Page 5, the reconciliation: raw ₹23.01 crore, minus re-imported duplicates, minus the legacy paise scaling, equals ₹67.10 lakh. Legacy amounts are exactly a hundred times the helpdesk amounts on every duplicate pair. Page 3 compares agents only within their own team - nobody is outside the normal range. Page 4 lists the exception cases with the evidence and where the evidence comes from."
@@ -21,4 +21,4 @@
 "Refund-plus-replacement tickets are 7.4% of refund tickets. Taking that to 1 percent is a planning assumption, not a forecast, and would be worth about ₹55,925 a quarter; the sensitivity table shows other rates. One run costs zero rupees in model cost."
 
 **2:50-3:00 - Validation and limitation**
-"The project records 26 automated checks passing: 21 structural and 5 independent recomputations. The 100-ticket samples and 40-case secondary review were AI-labelled, not independently human-reviewed. Claude also contributed to the rules, so the 37 out of 40 exact agreement may be optimistic. Independent human validation was not completed during the assignment window."
+"26 automated checks pass (21 structural, 5 independent recomputations). The 100-ticket samples and the 40-case review were done by the AI assistant, not a person, so independent human validation is still pending; in that 40-case sample there were no false positives or negatives, but it is a sample, not a guarantee."

@@ -66,16 +66,16 @@ Text QA (`src/ai_assistant.py`) is **deterministic regex/keyword rules - no LLM,
 Four kinds of evidence, reported separately in `outputs/validation_report.md`:
 * **A. Automated:** 21 structural checks in code (all pass) · **B. Independent recomputation:** 5 totals re-derived with the `csv` module (all pass).
 * **C. Development / hold-out:** 100 tickets (60 + 40) labelled **by the AI assistant, not by a human**. Hold-out: both-remedy precision 100%, 12/13 positives found; exception class 17/18; not pooled with the development sample.
-* **D. 40-case AI secondary review:** Claude, which also contributed to rule development, reviewed the cases blind to the existing class. Exact-class agreement was 37/40 (92.5%), with 3 disagreements and 5 reviewer-ambiguous cases. Under the existing positive-vs-rest comparison there were 0 false positives and 0 false negatives. This is supplemental AI review evidence, not independent human validation; agreement may be optimistic. Independent human validation was not completed during the assignment window.
+* **D. 40-Case AI Secondary Review:** **40-Case AI Secondary Review** - supplemental secondary-review evidence from Claude AI, which also contributed to rule development; agreement may be optimistic. This is separate from the project-owner-reported qualitative human package review; no independent human case labels or blinded statistical validation were completed. Exact-class agreement 37/40 (92.5%; error rate 7.5%), 0 false positives, 0 false negatives, 5 reviewer-ambiguous, 3 disagreements (all existing *ambiguous* → reviewer *not_confirmed*). A sample of 40 stratified tickets, not a guarantee for every ticket. The project owner reports a separate qualitative human review of the completed package; reviewer identity, date, and independence were not supplied. This does not constitute independent human case-label validation. Details below and in `outputs/validation_report.md`.
 
 ## 40-case AI secondary review
-**What was reviewed:** 40 refund tickets, sampled with a fixed seed from the 2,340 canonical refund tickets (10 classed confirmed, 10 likely, 8 ambiguous, 12 not flagged). Each was reviewed against the ticket, order, product, other tickets on the same order and the support policy (§5-§6), with the existing class hidden until after labelling. This is supplemental secondary-review evidence and applies to this stratified sample only, not to the whole dataset.
+**What was reviewed:** 40 refund tickets, sampled with a fixed seed from the 2,340 canonical refund tickets (10 classed confirmed, 10 likely, 8 ambiguous, 12 not flagged). Each was reviewed against the ticket, order, product, other tickets on the same order and the support policy (§5-§6), with the existing class hidden until after labelling. **The result applies to this stratified sample only, not to the whole dataset.**
 
-**Reviewer:** Claude AI assistant, which also contributed to rule development. This review is not independent human validation; agreement may be optimistic. Independent human validation was not completed during the assignment window.
+**Who reviewed:** Claude AI assistant, which also contributed to rule development. This is supplemental secondary-review evidence, not independent human validation; agreement may be optimistic. Independent human validation was not completed during the assignment window.
 
 **Result:** sample 40; correct 37; incorrect 3; accuracy 92.5% (95% interval 80%-97%); error rate 7.5%; false positives 0; false negatives 0; reviewer-ambiguous 5. Reviewer labels: 10 confirmed, 10 likely, 5 ambiguous, 15 not confirmed.
 
-**Known failure cases:** the 3 disagreements are all existing *ambiguous* → reviewer *not_confirmed* (cross-ticket flags where the refund was a cancellation or payment reversal). No keyword false positives or requested-vs-issued confusions were found. The production rules and the confirmed/likely/ambiguous counts were **not** changed. Independent human validation was not completed during the assignment window.
+**Known failure cases:** the 3 disagreements are all existing *ambiguous* → reviewer *not_confirmed* (cross-ticket flags where the refund was a cancellation or payment reversal). No keyword false positives or requested-vs-issued confusions were found. The production rules and the confirmed/likely/ambiguous counts were **not** changed. A person should still re-label the sheet.
 
 ## Cost
 **Paid model/API cost per run = ₹0** (no LLM or paid service is called; text QA is regex/keyword rules).
@@ -87,7 +87,7 @@ Four kinds of evidence, reported separately in `outputs/validation_report.md`:
 1. Month/quarter = ticket `created_at` (refund date not in data). 2. Refund attributed to resolving `agent_id`. 3. "Resolved" = status resolved/closed (policy §10). 4. Replacement cost = unit cost + ₹340; no refurbishment recovery. 5. The residual 1% target is a **planning assumption**. 6. Human review 3 min/case is an assumption.
 
 ## Limitations
-* Independent human validation was not completed during the assignment window. Claude labelled the 100-ticket development/hold-out samples and performed the 40-case secondary review; it also contributed to rule development, so those results are not independent and may be optimistic.
+* The project owner reports that a human reviewer qualitatively checked the package and dashboard; identity, date, and independence were not provided. Independent human case-label validation was not completed (the 40-case secondary review and 100-ticket samples were AI-labelled).
 * Rules are regex-based and will miss new phrasings; three gaps found in the hold-out were fixed without a third sample.
 * "Likely" = the agent's note says both remedies were given; unit dispatch is not in the data. "Confirmed" = two fields agree; for some tickets the note is silent.
 * Same-order cross-ticket replacements are only "ambiguous" (could be a separate incident); 53 of 173 rely on an order inferred from customer+SKU.
@@ -102,15 +102,15 @@ Four kinds of evidence, reported separately in `outputs/validation_report.md`:
 app.py  README.md  DECISIONS.md  DATA_AUDIT.md  AI_USAGE.md  submission-form.md  FINAL_SUBMISSION_CHECKLIST.md  requirements.txt
 src/      ingest · normalize · reconcile · refund_analysis · agent_analysis · ai_assistant · exceptions · gw_other · target · human_review · validate · pipeline · reports
 tests/    test_pipeline.py
-validation/  HUMAN_REVIEW_INSTRUCTIONS.md · AI-labelled sample files with pseudonymous ticket IDs
-             review_summary.csv · aggregate counts only; local human-review sheet is git-ignored
-outputs/  public aggregate reports · pseudonymous case-level exceptions and per-agent CSV exports
-          one_page_memo.md · validation_report.md · demo_script.md
+validation/  HUMAN_REVIEW_INSTRUCTIONS.md · human_review.csv (labels empty until a person fills them; git-ignored, contains ticket text)
+          dev_sample_labels_prefix.csv · holdout_sample_labels.csv   (AI-labelled; identifiers pseudonymized)
+outputs/  refund_reconciliation.{csv,md} · reconciliation_bridge_clean.csv · reason_code_summary.csv · target_sensitivity.csv · gw_other_review.csv
+          one_page_memo.md · validation_report.md · demo_script.md · case-level exports (generated locally, git-ignored)
 data/     README.md · raw/ (you supply, git-ignored) · processed/ (generated) · raw_checksums.txt
 ```
 
 ## Privacy of client data
-Git-ignored: `data/raw/`, `data/processed/`, `outputs/private/` (agent names, customer messages and agent notes), `validation/private/` (full-text label files), and `validation/human_review.csv`. Public case-level reports use deterministic pseudonyms for ticket, customer, order, agent, and SKU identifiers; no mapping table is published. The local processed data and private outputs retain source identifiers for joins and client-side review.
+Git-ignored: `data/raw/`, `data/processed/`, `outputs/private/` (agent names, customer messages and agent notes), `validation/private/` (full-text label files), and the optional `validation/human_review.csv` sheet. Public case-level exports use deterministic pseudonyms for ticket, customer, order, agent, and SKU identifiers; no mapping table is published. Private/local data retains source identifiers for joins and client-side review.
 
 ## Reproducibility
 Pure functions, no randomness in the pipeline (the human-review sample uses a fixed seed), pinned version ranges in `requirements.txt`; `python -m src.reports` regenerates every number in the docs. `data/raw_checksums.txt` lets you confirm the raw files are the ones analysed (SHA-256).
