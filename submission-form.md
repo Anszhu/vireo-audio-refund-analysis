@@ -29,10 +29,10 @@ An LLM classifier (no evidence it would beat rules on this templated text; it wo
 (a) GW-OTHER: 991 refunds worth ₹29.07 lakh in total (43.3% of canonical refund value); 879 of them (88.7%) are above the ₹500 goodwill cap (policy §5), and those 879 refunds are worth ₹28.72 lakh (42.8% of canonical refund value). A cap/approval issue or mis-coding - not distinguishable; reported as "requires review". (b) Returns Desk resolves 26% of refunds, not "the large majority"; Billing 25%. (c) 152 of 165 confirmed refund + replacement tickets sit with Tier 1 agents although policy reserves warranty-replacement approval to Tier 2 - observed, not established (flag ≠ approval). (d) Refund rate is flat at 18%-23%; volume drives value. (e) An exception list with evidence and evidence source per case (`refund_replacement_exceptions.csv`: 165 confirmed, 179 likely, 197 ambiguous). (f) A ready-to-fill human review sheet and instructions.
 
 **8. What did you use AI for?**
-Claude (Anthropic) in claude.ai chat helped with data exploration, pipeline/rule development, tests, the Streamlit app, documentation and an earlier audit. Codex desktop (GPT-6) was used for this final audit, privacy cleanup, wording updates and GitHub publication. No paid API/model calls were used; the delivered tool makes no AI/API calls. Claude helped most with rapid exploration and boilerplate; an early cross-ticket "likely" rule and first-pass regexes were discarded. The 100-ticket samples and 40-case secondary review were AI-labelled and are supplemental, not independent human validation. See `AI_USAGE.md`. Recording link (≤3 minutes): **[PASTE SCREEN RECORDING LINK]**
+Claude (Anthropic) in claude.ai chat helped with data exploration, pipeline/rule development, tests, the Streamlit app, documentation and an earlier audit. Codex desktop (GPT-6) was used for this final audit, privacy cleanup, wording updates and GitHub publication. No paid API/model calls were used; the delivered tool makes no AI/API calls. Claude helped most with rapid exploration and boilerplate; an early cross-ticket "likely" rule and first-pass regexes were discarded. The 100-ticket samples and 40-case secondary review were AI-labelled and are supplemental, not independent human validation. See `AI_USAGE.md`. Recording link (≤3 minutes): Not supplied at publication; add the ≤3-minute recording URL before final submission.
 
 **9. Public Google Drive Link**
-[PASTE GOOGLE DRIVE LINK]
+Not supplied at publication; add a public Drive link if required by the submission portal.
 
 **10. Someone picks this up Monday and you are unreachable - the three things they need to know**
 1. Put the five CSVs in `data/raw/`, run `python -m src.reports` then `streamlit run app.py`; every number in the docs is regenerated from that. Never edit raw files (`data/raw_checksums.txt`).
@@ -40,7 +40,8 @@ Claude (Anthropic) in claude.ai chat helped with data exploration, pipeline/rule
 3. Text-QA results are review prompts, not verdicts, and the 100-ticket validation was AI-labelled. Get a person to fill `validation/human_review.csv` (instructions alongside) and review the "likely"/"ambiguous" exceptions before anyone is approached about a specific ticket or agent.
 
 **11. Honest hours spent**
-[FILL IN - your actual hours; I cannot measure your time. Suggested breakdown: data audit __ h · pipeline/reconciliation __ h · validation __ h · tool __ h · docs/recording __ h · total __ h (cap ~5 h).]
+Not supplied: enter your actual total hours before final submission; I cannot infer your personal time spent.
 
 **12. GitHub Repo Link**
 https://github.com/Anszhu/vireo-audio-refund-analysis
+
