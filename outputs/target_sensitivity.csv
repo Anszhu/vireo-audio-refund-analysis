@@ -1,0 +1,7 @@
+scenario,basis,residual_rate,confirmed_tickets_per_quarter,avoided_tickets_per_quarter,avoidable_replacement_cost_per_quarter_inr,pct_of_quarterly_refund_value,window,note
+Current (observed),FACT,0.07414965986394557,36.333333333333336,0.0,0.0,0.0,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."
+Residual 5%,PLANNING ASSUMPTION,0.05,24.5,11.83333333333333,21053.562691131494,1.5161587751748864,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."
+Residual 3%,PLANNING ASSUMPTION,0.03,14.7,21.633333333333333,38489.47094801223,2.7717944932070466,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."
+Residual 2%,PLANNING ASSUMPTION,0.02,9.8,26.533333333333328,47207.42507645259,3.399612352223126,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."
+Residual 1% (illustrative target),PLANNING ASSUMPTION,0.01,4.9,31.433333333333334,55925.37920489297,4.027430211239206,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."
+Residual 0%,PLANNING ASSUMPTION,0.0,0.0,36.33333333333333,64643.333333333336,4.655248070255286,2025Q4+2026Q1+2026Q2,"The 1% target is a planning assumption, not a forecast."

@@ -114,4 +114,3 @@ Git-ignored: `data/raw/`, `data/processed/`, `outputs/private/` (agent names, cu
 
 ## Reproducibility
 Pure functions, no randomness in the pipeline (the human-review sample uses a fixed seed), pinned version ranges in `requirements.txt`; `python -m src.reports` regenerates every number in the docs. `data/raw_checksums.txt` lets you confirm the raw files are the ones analysed (SHA-256).
-
