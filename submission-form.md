@@ -40,7 +40,7 @@ Claude (Anthropic) in claude.ai chat, for data exploration code, the pipeline, t
 3. Text-QA results are review prompts, not verdicts, and the 100-ticket validation was AI-labelled. Get a person to fill `validation/human_review.csv` (instructions alongside) and review the "likely"/"ambiguous" exceptions before anyone is approached about a specific ticket or agent.
 
 **11. Honest hours spent**
-[FILL IN - your actual hours; I cannot measure your time. Suggested breakdown: data audit __ h · pipeline/reconciliation __ h · validation __ h · tool __ h · docs/recording __ h · total __ h (cap ~5 h).]
+**7 hours** (my actual total).
 
 **12. GitHub Repo Link**
 [https://github.com/Anszhu/vireo-audio-refund-analysis](https://github.com/Anszhu/vireo-audio-refund-analysis)

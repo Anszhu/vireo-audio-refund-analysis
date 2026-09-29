@@ -30,5 +30,5 @@ This audit records the local verification pass on 29 September 2026. The public 
 - Text rules are deterministic regex/keyword rules. Three gaps found in hold-out were patched without a fresh third sample. “Likely” reflects agent notes, not dispatch confirmation; ambiguous cross-ticket matches and inferred order joins remain.
 - The 1% replacement residual scenario is a planning assumption, not an observed or forecast saving. The legacy paise interpretation is strongly supported by internal evidence but was not independently confirmed by Vireo.
 - The dashboard smoke tests were local, not a deployed Streamlit Cloud check. The final local changes are not on GitHub until the user chooses to push them.
-- Screen recording and public Drive link were not provided; actual hours spent cannot be inferred. These fields remain placeholders in `submission-form.md` and must be supplied by the submitter.
+- The submitter reports spending **7 hours**, above the brief’s approximately 5-hour cap. Screen recording and public Drive link were not provided; those fields remain to be supplied in `submission-form.md`.
 - Reviewer identity/independence is not documented. A fresh, independent case-level review would strengthen the evidence before operational decisions.

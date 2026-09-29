@@ -14,7 +14,7 @@
 
 - [ ] Record and link the screen walkthrough (maximum 3 minutes), including prompts, changes between versions, and discarded work.
 - [ ] Add a public Drive link if the submission portal requires one.
-- [ ] Enter actual total hours spent.
+- [x] Entered submitter-reported actual time: 7 hours (above the brief’s approximately 5-hour cap).
 - [x] Publish the final local changes to `Anszhu/vireo-audio-refund-analysis` under the `Anszhu` GitHub identity.
 - [ ] Streamlit Community Cloud deployment has not been performed. Settings: repository `Anszhu/vireo-audio-refund-analysis`, branch `main`, main file `app_public.py`.
 - [ ] Obtain an independent case-level review before treating text-rule performance as statistically validated.
