@@ -14,7 +14,7 @@ def _mapping(values, prefix):
     # without numbering IDs in source order or publishing a mapping table.
     result = {}
     for value in clean:
-        digest = hashlib.sha256((prefix + "|" + value).encode("utf-8")).hexdigest()[:10].upper()
+        digest = hashlib.sha256((prefix.lower() + "|" + value).encode("utf-8")).hexdigest()[:10].upper()
         result[value] = f"{prefix}-{digest}"
     return result
 
@@ -26,14 +26,14 @@ def identifier_maps(canonical):
          canonical.get("resolved_order_id", pd.Series(dtype="object"))],
         ignore_index=True,
     )
-    ticket_map = _mapping(canonical.get("ticket_id", []), "CASE")
+    ticket_map = _mapping(canonical.get("ticket_id", []), "case")
     return {
         "ticket_id": ticket_map,
-        "customer_id": _mapping(canonical.get("customer_id", []), "CUSTOMER"),
-        "order_id": _mapping(order_values, "ORDER"),
-        "resolved_order_id": _mapping(order_values, "ORDER"),
-        "agent_id": _mapping(canonical.get("agent_id", []), "AGENT"),
-        "product_sku": _mapping(canonical.get("product_sku", []), "SKU"),
+        "customer_id": _mapping(canonical.get("customer_id", []), "customer"),
+        "order_id": _mapping(order_values, "order"),
+        "resolved_order_id": _mapping(order_values, "order"),
+        "agent_id": _mapping(canonical.get("agent_id", []), "agent"),
+        "product_sku": _mapping(canonical.get("product_sku", []), "sku"),
         "cross_ticket_partner": ticket_map,
     }
 
@@ -57,3 +57,4 @@ def anonymize_reconciliation(frame, maps):
         lambda value: maps["agent_id"].get(str(value), value)
     )
     return safe
+
