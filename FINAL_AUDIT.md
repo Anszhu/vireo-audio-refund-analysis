@@ -2,7 +2,7 @@
 
 ## Package and publication
 - Public repository: https://github.com/Anszhu/vireo-audio-refund-analysis
-- Published 45 project files. GitHub reports the publishing commit author and committer as `Anszhu`.
+- Published 46 project files (45 analysis/application files plus this audit note). GitHub reports the publishing commit author and committer as `Anszhu`.
 - No raw client CSVs, private case text, reviewer name map, secrets, or local machine paths are included. Case-level report IDs are stable pseudonyms; the repo contains no reverse map.
 - Public outputs keep the analysis totals and by-agent aggregates. The app and pipeline source are included; the clean checkout has no input data by design.
 
