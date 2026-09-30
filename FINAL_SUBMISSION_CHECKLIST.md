@@ -15,7 +15,7 @@
 
 ## Still required from the submitter
 
-- [ ] Record and link the screen walkthrough (maximum 3 minutes), including prompts, changes between versions, and discarded work.
+- [x] Screen walkthrough link supplied by submitter; confirm it is no longer than 3 minutes and covers prompts, version changes, and discarded work.
 - [ ] Add a public Drive link if the submission portal requires one.
 - [x] Entered submitter-reported actual time: 7 hours (above the brief’s approximately 5-hour cap).
 - [x] Publish the local cleanup changes to GitHub under `Anszhu/vireo-audio-refund-analysis`.
